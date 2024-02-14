@@ -14,10 +14,6 @@ public interface PictureRepository extends JpaRepository<Picture, String> {
     @Query("SELECT p FROM Picture p WHERE p.breed = :breed ORDER BY p.votes DESC")
     public List<Picture> searchByBreed(@Param("breed") String breed);
 
-    /*@Query("SELECT p.url, p.votes FROM Picture p WHERE p.breed = :breed ORDER BY p.votes DESC")
-    public List<Object[]> searchByBreed(@Param("breed") String breed);*/
-
-
     @Query("SELECT p FROM Picture p WHERE p.url = :url")
     public Picture searchByUrl(@Param("url") String url);
 
