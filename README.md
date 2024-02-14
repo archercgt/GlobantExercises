@@ -4,6 +4,7 @@ Training Spring Boot AWS Lamba exercises
 sqsLambdaFunction project was created using Spring Boot 3.2.2 and amazon-corretto-17.0.10.7.1.
 
 api_challenge-master was created with Spring Boot 2.7.17 and Oracle OpenJDL 1.8.0_111.
+
 Endpoints of the project:
 - List all of the available dog pictures grouped by breed:
   http://localhost:8080/api/list Get method must be used.
