@@ -17,7 +17,4 @@ public interface PictureRepository extends JpaRepository<Picture, String> {
     @Query("SELECT p FROM Picture p WHERE p.url = :url")
     public Picture searchByUrl(@Param("url") String url);
 
-    @Query("SELECT p FROM Picture p GROUP BY p.breed")
-    public List<Picture> listAll();
-
 }

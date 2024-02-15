@@ -16,17 +16,20 @@ public class Picture {
     private String url, additional_info, breed;
     private int votes;
 
+    //Constructor Method
     public Picture() {
     }
 
+    //Method for incrementing the votes one unit.
     public void incrementVotes() {
         votes++;
     }
-
+    //Method for decrementing the votes one unit.
     public void decrementVotes() {
         votes--;
     }
 
+    //Getter and Setter Methods
     public String getUrl() {
         return url;
     }
@@ -59,6 +62,7 @@ public class Picture {
         this.votes = votes;
     }
 
+    //To string Method
     @Override
     public String toString() {
         return "Picture{" +
