@@ -12,11 +12,13 @@ import java.util.Optional;
 import java.util.TreeMap;
 import java.util.Comparator;
 import java.util.stream.Collectors;
+import java.util.Map;
 
 
 @Service
 public class PictureService {
     @Autowired PictureRepository pictureRepository;
+    @Autowired UserService userService;
     @Transactional
     public void createPicure(String url, String breed){
         Optional<Picture> found = Optional.ofNullable(pictureRepository.searchByUrl(url));
@@ -25,7 +27,6 @@ public class PictureService {
             Picture picture = new Picture();
             picture.setUrl(url);
             picture.setBreed(breed);
-            picture.setVotes(0);
             pictureRepository.save(picture);
         }
     }
@@ -40,25 +41,44 @@ public class PictureService {
                 .collect(Collectors.groupingBy(Picture::getBreed, TreeMap::new, Collectors.toList()));
         // Sort pictures within each breed by descending votes
         picturesByBreed.forEach((breed, pictures) -> {
-            pictures.sort(Comparator.comparingInt(Picture::getVotes).reversed());
+            pictures.sort(Comparator.comparingInt(Picture::getVotesUp).reversed());
         });
         return picturesByBreed;
     }
     @Transactional
-    public Answer vote(String url, String voteDesicion){
-        voteDesicion.toLowerCase();
-        if(!voteDesicion.equals("up") && !voteDesicion.equals("down")){
+    public Answer vote(String url, String voteDecision, Long userId){
+        //Validate proper vote input
+        voteDecision.toLowerCase();
+        if(!voteDecision.equals("up") && !voteDecision.equals("down")){
             return new Answer("Wrong vote value, please enter \"up\" or \"down\"");
         }
+        //Validate existing picture by url
         Optional<Picture> found = Optional.ofNullable(pictureRepository.searchByUrl(url));
         if(found.isPresent()){
-            Picture picture = found.get();
-            if(voteDesicion.equals("up"))
-                picture.incrementVotes();
-            else
-                picture.decrementVotes();
-            pictureRepository.save(picture);
-            return new Answer("The vote was successfully saved!!!");
+            //Validate user existence
+            if(userService.exists(userId)){
+                Picture picture = found.get();
+                Map<Long, String> map = picture.getUserVoteMap();
+                //Validate if user has already voted before
+                if(map.containsKey(userId)){
+                    if(map.get(userId).equals(voteDecision))
+                        return new Answer("User already voted " + voteDecision + " for the picture");
+                    else{
+                        if (voteDecision.equals("up"))
+                            picture.decrementVotesDown();
+                        else
+                            picture.decrementVotesUp();
+                    }
+                }
+                if(voteDecision.equals("up"))
+                    picture.incrementVotesUp();
+                else
+                    picture.incrementVotesDown();
+                picture.setUser(userId,voteDecision);
+                pictureRepository.save(picture);
+                return new Answer("The vote was successfully saved!!!");
+            }else
+                return new Answer("Does not exists a user for the entered userId");
         }else
             return new Answer("There is not a picture with the entered URL");
     }

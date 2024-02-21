@@ -5,7 +5,6 @@ import com.disney.studios.entities.Picture;
 import com.disney.studios.entities.User;
 import com.disney.studios.services.PictureService;
 import com.disney.studios.services.UserService;
-import com.disney.studios.services.VotedService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
@@ -22,8 +21,7 @@ public class ApiController {
     private PictureService pictureService;
     @Autowired
     private UserService userService;
-    @Autowired
-    private VotedService votedService;
+
 
     //For welcoming when pointing to http://localhost:8080
     @GetMapping("/")
@@ -51,15 +49,7 @@ public class ApiController {
             @RequestHeader("vote") String vote,
             @RequestHeader("userId") Long userId){
         // Check if the user has already voted
-        if (votedService.hasUserVoted(userId)) {
-            return new Answer("User has already voted for a picture.");
-        }else{
-            if(userService.userExists(userId)){
-                votedService.setUserVoted(userId);
-                return pictureService.vote(url,vote);
-            }else
-                return new Answer("Does not exist an user with the entered Id");
-        }
+        return pictureService.vote(url, vote, userId);
     }
 
     //For denying the access to the enpoint /api/vote when using the Get Method

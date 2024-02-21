@@ -29,7 +29,7 @@ public class UserService {
     public List<User> listUsers(){
         return  userRepository.findAll();
     }
-    public boolean userExists(Long userId) {
+    public boolean exists(Long userId) {
         Optional<User> found = userRepository.findById(userId);
         return found.isPresent();
     }

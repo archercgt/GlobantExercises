@@ -11,7 +11,7 @@ import java.util.List;
 @Repository
 public interface PictureRepository extends JpaRepository<Picture, String> {
 
-    @Query("SELECT p FROM Picture p WHERE p.breed = :breed ORDER BY p.votes DESC")
+    @Query("SELECT p FROM Picture p WHERE p.breed = :breed ORDER BY p.votesUp DESC")
     public List<Picture> searchByBreed(@Param("breed") String breed);
 
     @Query("SELECT p FROM Picture p WHERE p.url = :url")
