@@ -31,7 +31,7 @@ Once you have the project running, you can access the next Endpoints using Imson
  
 - User creation (Put method must be used):  
   http://localhost:8080/api/users  
-  Request Headers: id, name
+  Request Headers: id, name  
   Example: id  12345  name John
 
 - List users (Get method mus be used):  
@@ -45,7 +45,7 @@ Once you have the project running, you can access the next Endpoints using Imson
 
 - Get additional information from a dog's picture (Get method must be used):  
   http://localhost:8080/api/info  
-  Request Headers: url
+  Request Headers: url  
   Example url http://i.imgur.com/SAJJ1oH.png
 
 - Vote up and down a dog's picture (Patch method must be used):  
