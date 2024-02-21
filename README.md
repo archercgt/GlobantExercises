@@ -20,6 +20,9 @@ sqsLambdaSdk was creaated using Spring Boot 2.7.17 and amazon-corretto-17.0.10.7
 
 api_challenge-master was created with Spring Boot 2.7.17 and Oracle OpenJDL 1.8.0_111.
 
+## How to implement api_challenge-master project
+
+
 Endpoints of the project:
 - List all of the available dog pictures grouped by breed:
   http://localhost:8080/api/list
