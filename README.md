@@ -23,36 +23,36 @@ api_challenge-master was created with Spring Boot 2.7.17 and Oracle OpenJDL 1.8.
 ## How to implement api_challenge-master project
 Once you have the project running, you can the next Endpoints using Imsonia https://insomnia.rest/ or a similar application for testing the RestAPIs:
 
-- List all of the available dog pictures grouped by breed:<br>
-  http://localhost:8080/api/list<br>
-  Get method must be used.<br>
+- List all of the available dog pictures grouped by breed:
+  http://localhost:8080/api/list
+  Get method must be used.
   
-- List all of the available dog pictures of a particular breed:<br>
-  http://localhost:8080/api/list/{breed}<br>
-  Breed can be labrador, pug, retriever or yorkie.<br>
-  Get method must be used.<br>
+- List all of the available dog pictures of a particular breed:
+  http://localhost:8080/api/list/{breed}
+  Breed can be labrador, pug, retriever or yorkie.
+  Get method must be used.
 
 - User's creation:<br>
-  http://localhost:8080/api/users<br>
-  Request Headers: id, name   Example: id  12345  name John<br>
-  Put method must be used.<br>
+  http://localhost:8080/api/users
+  Request Headers: id, name   Example: id  12345  name John
+  Put method must be used.
 
 - List users<br>
-  http://localhost:8080/api/users<br>
-  Get method mus be used.<br>
+  http://localhost:8080/api/users
+  Get method mus be used.
     
-- Add additional information to a dog's picture:<br>
-  http://localhost:8080/api/info<br>
-  Request Headers: url, info    Example url http://i.imgur.com/SAJJ1oH.png info Dog with a smile.<br>
-  Patch method must be used.<br>
+- Add additional information to a dog's picture:
+  http://localhost:8080/api/info
+  Request Headers: url, info    Example url http://i.imgur.com/SAJJ1oH.png info Dog with a smile.
+  Patch method must be used.
 
-- Get additional information form a dog's picture:<br>
-  http://localhost:8080/api/info<br>
-  Request Headers: url    Example url http://i.imgur.com/SAJJ1oH.png<br>
-  Get method must be used.<br>
+- Get additional information form a dog's picture:
+  http://localhost:8080/api/info
+  Request Headers: url    Example url http://i.imgur.com/SAJJ1oH.png
+  Get method must be used.
 
-  - Vote up and down a dog picture:<br>
-  http://localhost:8080/api/vote<br>
-  Request Headers: url, vote, userId    Example url http://i.imgur.com/SAJJ1oH.png vote up userId 12345<br>
-  Vote can be up or down.<br>
-  Patch method must be used.<br>
+  - Vote up and down a dog picture:
+  http://localhost:8080/api/vote
+  Request Headers: url, vote, userId    Example url http://i.imgur.com/SAJJ1oH.png vote up userId 12345
+  Vote can be up or down.
+  Patch method must be used.
