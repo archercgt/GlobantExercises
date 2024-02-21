@@ -26,12 +26,12 @@ Once you have the project running, you can the next Endpoints using Imsonia http
   http://localhost:8080/api/list  
   Get method must be used.
   
-- List all of the available dog pictures of a particular breed:
-  http://localhost:8080/api/list/{breed}
-  Breed can be labrador, pug, retriever or yorkie.
+- List all of the available dog pictures of a particular breed:  
+  http://localhost:8080/api/list/{breed}  
+  Breed can be labrador, pug, retriever or yorkie.  
   Get method must be used.
 
-- User's creation:<br>
+- User's creation:
   http://localhost:8080/api/users
   Request Headers: id, name   Example: id  12345  name John
   Put method must be used.
