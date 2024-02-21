@@ -1,8 +1,10 @@
 # GlobantExercises
-Training Spring Boot AWS Lamba exercises
+Training Spring Boot and AWS Lamba exercises for becoming familiar with the concepts.
 
 ## Description of the projects
 
+### sqsLambdaFunction
+In this project SNS generates messages that are taken for the SQS service and stored in a queue. This sqs messages work as triggers of a Lambda function, which extracts the SNS original message and print it in the console.
 
 sqsLambdaFunction project was created using Spring Boot 3.2.2 and amazon-corretto-17.0.10.7.1.
 
