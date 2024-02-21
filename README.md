@@ -28,7 +28,7 @@ Endpoints of the project:
     
 - Add additional information to a dog's picture:
   http://localhost:8080/api/info
-  Request Headers: url, info    Example url http://i.imgur.com/SAJJ1oH.png info Dog with a smile
+  Request Headers: url, info    Example url http://i.imgur.com/SAJJ1oH.png info Dog with a smile.
   Patch method must be used.
 
 - Get additional information form a dog's picture:
