@@ -1,6 +1,7 @@
 # GlobantExercises
 Training Spring Boot and AWS Lamba exercises for becoming familiar with the concepts.
 
+
 ## Description of the projects
 
 ### sqsLambdaFunction
@@ -19,6 +20,7 @@ sqsLambdaFunction project was created using Spring Boot 3.2.2 and amazon-corrett
 sqsLambdaSdk was creaated using Spring Boot 2.7.17 and amazon-corretto-17.0.10.7.1. 
 
 api_challenge-master was created with Spring Boot 2.7.17 and Oracle OpenJDL 1.8.0_111.
+
 
 ## How to implement api_challenge-master project
 Once you have the project running, you can the next Endpoints using Imsonia https://insomnia.rest/ or a similar application for testing the RestAPIs:
