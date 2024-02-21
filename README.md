@@ -22,36 +22,34 @@ api_challenge-master was created with Spring Boot 2.7.17 and Oracle OpenJDL 1.8.
 ## How to implement api_challenge-master project
 Once you have the project running, you can access the next Endpoints using Imsonia https://insomnia.rest/ or a similar application for testing RestAPIs:
 
-- List all available dog pictures grouped by breed:  
+- List all available dog pictures grouped by breed (Get method must be used):  
   http://localhost:8080/api/list  
-  Get method must be used.
-  
-- List all available dog pictures of a particular breed:  
+ 
+- List all available dog pictures of a particular breed (Get method must be used):  
   http://localhost:8080/api/list/{breed}  
   Breed value can be labrador, pug, retriever or yorkie.  
-  Get method must be used.
-
-- User creation:  
+ 
+- User creation (Put method must be used):  
   http://localhost:8080/api/users  
-  Request Headers: id, name   Example: id  12345  name John  
-  Put method must be used.
+  Request Headers: id, name
+  Example: id  12345  name John
 
-- List users:  
+- List users (Get method mus be used):  
   http://localhost:8080/api/users  
-  Get method mus be used.
-    
-- Add additional information to a dog's picture:  
+  Get method mus be used
+  
+- Add additional information to a dog's picture (Patch method must be used):  
   http://localhost:8080/api/info  
-  Request Headers: url, info    Example url http://i.imgur.com/SAJJ1oH.png info Dog with a smile.  
-  Patch method must be used.
+  Request Headers: url, info  
+  Example url http://i.imgur.com/SAJJ1oH.png info Dog with a smile
 
-- Get additional information from a dog's picture:  
+- Get additional information from a dog's picture (Get method must be used):  
   http://localhost:8080/api/info  
-  Request Headers: url    Example url http://i.imgur.com/SAJJ1oH.png  
-  Get method must be used.
+  Request Headers: url
+  Example url http://i.imgur.com/SAJJ1oH.png
 
-- Vote up and down a dog's picture:  
+- Vote up and down a dog's picture (Patch method must be used):  
   http://localhost:8080/api/vote  
-  Request Headers: url, vote, userId    Example url http://i.imgur.com/SAJJ1oH.png vote up userId 12345  
-  Vote value can be up or down.  
-  Patch method must be used.  
+  Request Headers: url, vote, userId  
+  Example url http://i.imgur.com/SAJJ1oH.png vote up userId 12345  
+  Vote value can be up or down. 
