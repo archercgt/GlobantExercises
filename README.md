@@ -51,7 +51,7 @@ Once you have the project running, you can the next Endpoints using Imsonia http
   Request Headers: url    Example url http://i.imgur.com/SAJJ1oH.png
   Get method must be used.
 
-  - Vote up and down a dog picture:
+- Vote up and down a dog picture:
   http://localhost:8080/api/vote
   Request Headers: url, vote, userId    Example url http://i.imgur.com/SAJJ1oH.png vote up userId 12345
   Vote can be up or down.
