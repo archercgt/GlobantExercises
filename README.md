@@ -25,13 +25,7 @@ Endpoints of the project:
 - List users
   http://localhost:8080/api/users
   Get method mus be used.
-  
-- Vote up and down a dog picture:
-  http://localhost:8080/api/vote
-  Request Headers: url, vote, userId    Example url http://i.imgur.com/SAJJ1oH.png vote up userId 12345
-  Vote can be up or down.
-  Patch method must be used.
-  
+    
 - Add additional information to a dog's picture:
   http://localhost:8080/api/info
   Request Headers: url, info    Example url http://i.imgur.com/SAJJ1oH.png info Dog with a smile
@@ -41,3 +35,9 @@ Endpoints of the project:
   http://localhost:8080/api/info
   Request Headers: url    Example url http://i.imgur.com/SAJJ1oH.png
   Get method must be used.
+
+  - Vote up and down a dog picture:
+  http://localhost:8080/api/vote
+  Request Headers: url, vote, userId    Example url http://i.imgur.com/SAJJ1oH.png vote up userId 12345
+  Vote can be up or down.
+  Patch method must be used.
