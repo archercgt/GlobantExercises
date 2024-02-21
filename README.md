@@ -7,13 +7,13 @@ Training Spring Boot and AWS Lamba exercises for becoming familiar with the conc
 In this project AWS SNS service generates messages that are later taken and stored in a queue by the AWS SQS service . These SQS messages work as triggers of a Lambda function, which extracts the original SNS messages and print them in the console.
 
 ### sqsLambdaSdk
-This project does exactly the same that sqsLambdaFunction, but uses AWS SDK for Java instead of Spring Cloud.
+This project does exactly the same that sqsLambdaFunction project, but uses AWS SDK for Java instead of Spring Cloud.
 
 ### api_challenge-master
-This project is a solutipon to the challenge described in https://gist.github.com/fredjean/bfdaf53c6baa547e9c16
+This project is a solution to the challenge described in https://gist.github.com/fredjean/bfdaf53c6baa547e9c16
 
 
-
+## Used tools
 sqsLambdaFunction project was created using Spring Boot 3.2.2 and amazon-corretto-17.0.10.7.1.
 
 sqsLambdaSdk was creaated using Spring Boot 2.7.17 and amazon-corretto-17.0.10.7.1. 
