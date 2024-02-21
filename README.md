@@ -22,7 +22,7 @@ api_challenge-master was created with Spring Boot 2.7.17 and Oracle OpenJDL 1.8.
 ## How to implement api_challenge-master project
 Once you have the project running, you can the next Endpoints using Imsonia https://insomnia.rest/ or a similar application for testing the RestAPIs:
 
-- List all of the available dog pictures grouped by breed:
+- List all of the available dog pictures grouped by breed:  
   http://localhost:8080/api/list
   Get method must be used.
   
