@@ -35,6 +35,14 @@ public class Picture {
         userVoteMap = new HashMap<>();
     }
 
+    public Picture(String url, String breed) {
+        this.url = url;
+        this.breed = breed;
+        votesUp = 0;
+        votesDown = 0;
+        userVoteMap = new HashMap<>();
+    }
+
     //Method for incrementing the votesUp one unit.
     public void incrementVotesUp() {
         votesUp ++;
