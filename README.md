@@ -15,6 +15,9 @@ This project is a solution to the challenge described in https://gist.github.com
 ### twoSumLeetCode
 This project is a solution to the challenge twoSum problem described in https://leetcode.com/problems/two-sum/description/
 
+### introGraphql
+Project created following the guide in https://spring.io/guides/gs/graphql-server#initial
+
 ## Used tools
 sqsLambdaFunction project was created using Spring Boot 3.2.2 and amazon-corretto-17.0.10.7.1.
 
@@ -23,6 +26,8 @@ sqsLambdaSdk was creaated using Spring Boot 2.7.17 and amazon-corretto-17.0.10.7
 api_challenge-master was created with Spring Boot 2.7.17 and Oracle OpenJDL 1.8.0_111.
 
 twoSumLeetCode was created with amazon-corretto-17.0.10.7.1.
+
+introGraphql was created with Spring Boot 3.2.3 and amazon-corretto-17.0.10.7.1.
 
 ## How to implement api_challenge-master project
 Once you have the project running, you can access the next Endpoints using Imsonia https://insomnia.rest/ or a similar application for testing RestAPIs:
