@@ -24,24 +24,13 @@ class Solution {
         for(int i = 0; i < nums.length; i++){
             //Define the value of the number that should be found in the map.
             int remaining = target - nums[i];
-            int searchResult = searchInMap(remaining);
-            if(searchResult != -1){
-                result[0] = searchResult;
+            if (map.containsKey(remaining)){
+                result[0] = map.get(remaining);
                 result[1] = i;
                 break;
             }else
-                //Save a new entry in the map if validation is not accomplished.
-                map.put(i,nums[i]);
+                map.put(nums[i], i);
         }
         return result;
-    }
-    /*Method that iterates over a map searching for a specific value and returns its key if the value is
-    key if the value is present, in other case return -1.*/
-    private int searchInMap(int remaining){
-        for (Map.Entry<Integer, Integer> entry : map.entrySet()) {
-            if(entry.getValue() == remaining)
-                return entry.getKey();
-        }
-        return -1;
     }
 }
