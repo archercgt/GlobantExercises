@@ -18,6 +18,9 @@ This project is a solution to the challenge twoSum problem described in https://
 ### introGraphql
 Project created following the guide in https://spring.io/guides/gs/graphql-server#initial
 
+### twoSum2Pointers
+Solution for the twoSum problem using two pointers. IMPORTAN!!! This solution only works if the input array is sorted.
+
 ## Used tools
 sqsLambdaFunction project was created using Spring Boot 3.2.2 and amazon-corretto-17.0.10.7.1.
 
@@ -26,6 +29,8 @@ sqsLambdaSdk was creaated using Spring Boot 2.7.17 and amazon-corretto-17.0.10.7
 api_challenge-master was created with Spring Boot 2.7.17 and Oracle OpenJDL 1.8.0_111.
 
 twoSumLeetCode was created with amazon-corretto-17.0.10.7.1.
+
+twoSum2Pointers was created with amazon-corretto-17.0.10.7.1.
 
 introGraphql was created with Spring Boot 3.2.3 and amazon-corretto-17.0.10.7.1.
 
