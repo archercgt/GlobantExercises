@@ -19,7 +19,7 @@ This project is a solution to the challenge twoSum problem described in https://
 Project created following the guide in https://spring.io/guides/gs/graphql-server#initial
 
 ### twoSum2Pointers
-Solution for the twoSum problem using two pointers. IMPORTAN!!! This solution only works if the input array is sorted.
+Solution for the twoSum problem using two pointers. IMPORTANT!!! This solution only works if the input array is sorted.
 
 ## Used tools
 sqsLambdaFunction project was created using Spring Boot 3.2.2 and amazon-corretto-17.0.10.7.1.
