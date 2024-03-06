@@ -81,59 +81,57 @@ The method PUT must be set in Insomnia and all queries mut point to http://app.t
 
 Examples:  
 - List all available dog pictures grouped by breed:  
-query {
-    listPictures {
-        url
-				breed
-				votesUp
-				votesDown
-    }
-}
+query {  
+    listPictures {  
+        url  
+	breed  
+	votesUp  
+	votesDown  
+    }  
+}  
  
 - List all available dog pictures of a particular breed:  
-query {
-    listByBreed(breed: "labrador") {
-        url
-        breed
-        votesUp
-        votesDown
-    }
-}
+query {  
+    listByBreed(breed: "labrador") {  
+        url  
+        breed  
+        votesUp  
+        votesDown  
+    }  
+}  
  
 - User creation:  
-mutation {
-    createUser(id: 98765, fullName: "John Doe") {
-        answer
-    }
-}
+mutation {  
+    createUser(id: 98765, fullName: "John Doe") {  
+        answer  
+    }  
+}  
 
 - List users:  
-query {
-    listUsers {
-        id
-				fullName
-    }
-}
+query {  
+    listUsers {  
+        id  
+	fullName  
+    }  
+}  
   
 - Add additional information to a dog's picture:  
-mutation {
-    addInfo(url: "http://i.imgur.com/VzFTsGg.png", info: "Dog with spots") {
-        answer
-    }
-}
+mutation {  
+    addInfo(url: "http://i.imgur.com/VzFTsGg.png", info: "Dog with spots") {  
+        answer  
+    }  
+}  
 
 - Get additional information from a dog's picture:  
-query {
-    getInfo(url: "http://i.imgur.com/SAJJ1oH.png") {
-        answer
-    }
-}
+query {  
+    getInfo(url: "http://i.imgur.com/SAJJ1oH.png") {  
+        answer  
+    }  
+}  
 
 - Vote up and down a dog's picture:  
-mutation {
-    vote(url: "http://i.imgur.com/hBFRUuW.png", vote: "up", userId: 98765) {
-        answer
-    }
+mutation {  
+    vote(url: "http://i.imgur.com/hBFRUuW.png", vote: "up", userId: 98765) {  
+        answer  
+    }  
 }
-
-
