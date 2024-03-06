@@ -1,0 +1,29 @@
+type Query {
+    listPictures: [Picture]
+    listByBreed(breed: String!): [Picture]
+    getInfo(url: String!): Answer
+    listUsers: [User]
+}
+
+type Mutation {
+    createUser(id: ID!, fullName: String!): Answer
+    vote(url: String!, vote: String!, userId: ID!): Answer
+    addInfo(url: String!, info: String!): Answer
+}
+
+type User {
+    id: ID
+    fullName: String
+}
+
+type Picture {
+    url: String
+    breed: String
+    additional_info: String
+    votesUp: Int
+    votesDown: Int
+}
+
+type Answer {
+    answer: String
+}
